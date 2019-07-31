@@ -1,0 +1,5 @@
+a.md-header-nav__button.md-logo img { width: 100px;}
+
+.todo {margin-left: 2em; border: 1px solid; background: #A00; color: #FFF}
+
+.todo::before {content:"TODO:"}

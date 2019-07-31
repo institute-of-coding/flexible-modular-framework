@@ -1,0 +1,63 @@
+site_name: The Flexible Modular Framework
+site_author: 'James Shuttleworth'
+
+theme: 
+  name: material
+  logo: 'images/logo.svg'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+
+nav:
+    - The Framework: index.md
+    - Becoming a Skill Provider: recog_skill_prov.md
+plugins:
+    - search
+    - markdownextradata
+    - pdf-export:
+        verbose: false
+        combined: false
+        media_type: print
+        enabled_if_env: ENABLE_PDF_EXPORT
+
+markdown_extensions:
+  - footnotes
+  - markdown_blockdiag:
+      format: svg
+
+extra:
+  version:
+    major: 0
+    minor: 1
+    postfix: draft
+
+  fmf:
+    fmf_long: Flexible Modular Framework
+    fmf: FMF
+    module: Module
+    modules: Modules
+    lo_long: Learning Outcome
+    lo: LO
+    los_long: Learning Outcome
+    los: LOs
+    pdp_long: Professional Development Programme
+    pdp: PDP
+    pdps_long: Professional Development Programmes
+    pdps: PDPs
+    course: Course
+    courses: Courses
+    skill: Skill
+    skills: Skills
+    skill_provider: Skill Provider
+    skill_providers: Skill Providers
+    gateway_ass: Gateway Assessment
+    gateway_asss: Gateway Assessments
+    apl: APL
+    apl_long: Accreditation of Prior Learning
+    apel_long: Accreditation of Prior Experiential Learning
+    apel: APEL
+    doc_url: NOT IMPLEMENTED
+    approved_course_example: MSc. Cyber Security
+    approved_course_institution: Coventry Universiry
+extra_css:
+  - 'stylesheets/extra.css'
