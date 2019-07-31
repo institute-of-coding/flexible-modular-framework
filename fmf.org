@@ -1,0 +1,584 @@
+* Setup                                                            :noexport:
+#+TITLE: The IoC {{{fmf_long}}}
+#+DATE: 
+#+SUBTITLE: Version [{{{major}}}.{{{minor}}}.{{{postfix}}}]
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline
+#+OPTIONS: author:t broken-links:nil c:nil creator:nil
+#+OPTIONS: d:(not "LOGBOOK") date:nil e:t email:nil f:t inline:t num:t
+#+OPTIONS: p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+OPTIONS: timestamp:nil title:t toc:t todo:t |:t
+#+AUTHOR: The Institute of Coding
+#+EMAIL: 
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+EXCLUDE_TAGS: noexport
+#+CREATOR: Emacs 26.1 (Org mode 9.1.9)
+#+bibliography: bib plain
+
+
+# VERSION INFO
+
+#+macro: major 0
+#+macro: minor 1
+#+macro: postfix draft
+
+
+#+Macro: fmf_long Flexible Modular Framework
+#+MACRO: fmf FMF
+#+MACRO: module @@html:<span class="module">Module</span>@@
+#+MACRO: modules @@html:<span class="module">Module</span>s@@
+#+MACRO: lo_long @@html:<span class="lo_long">Learning Outcome</span>@@
+#+MACRO: lo @@html:<span class="lo">LO</span>@@
+#+MACRO: los_long @@html:<span class="los_long">Learning Outcome</span>@@s
+#+MACRO: los @@html:<span class="los">LO</span>s@@
+
+#+MACRO: pdp_long @@html:<span class="pdp_long">Professional Development Programme</span>@@
+#+MACRO: pdp @@html:<span class="pdp">PDP</span>@@
+#+MACRO: pdps_long @@html:<span class="pdps_long">Professional Development Programme</span>@@s
+#+MACRO: pdps @@html:<span class="pdps">PDP</span>s@@
+
+
+
+#+MACRO: course @@html:<span class="course">Course</span>@@
+#+MACRO: courses @@html:<span class="course">Course</span>s@@
+
+
+#+MACRO: skill Skill
+#+MACRO: skills Skills
+#+MACRO: skill_provider Skill Provider
+#+MACRO: skill_providers Skill Providers
+
+#+MACRO: gateway_ass Gateway Assessment
+#+MACRO: gateway_asss Gateway Assessments
+
+#+MACRO: apl APL
+#+MACRO: apl_long Accreditation of Prior Learning
+#+MACRO: apel_long Accreditation of Prior Experiential Learning
+#+MACRO: apel APEL
+
+#+MACRO: doc_url NOT IMPLEMENTED
+
+
+#+MACRO: approved_course_example MSc. Cyber Security
+#+MACRO: approved_course_institution Coventry Universiry
+
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="https://gongzhitaao.org/orgcss/org.css"/>
+
+#+HTML_HEAD: <script src="jquery-3.3.1.min.js"></script>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="./fmf.css"/>
+
+
+
+# #+html: <script> function textIs( index ) {console.log( index + ': ' + $( this ).text() );} </script>
+# #+html: <span onclick="$('.module' ).each(textIs);">unit</span>
+
+* Introduction
+The {{{fmf_long}}} ({{{fmf}}}) is a collection of practical digital
+skills; a curated repository of ways in which learners can learn those
+skills and demonstrate that learning; and this document, which details
+how the skills and repository can be used to create flexible level 7
+degree {{{courses}}} that encourages learners that require recognised
+education in modern digital skills by recognising their existing
+achievements on other {{{courses}}} and professional development
+activities.
+
+** Goals of the {{{fmf_long}}}
+
+ Universities in the UK have spent decades working to create level 7
+ {{{courses}}} that best meet the needs of learners and their current or
+ future employers.  
+
+ There are, however, potential learners that traditionally don't engage
+ with such {{{courses}}}.  Mature students that require updated digital
+ skills to progress in their current role; workforces that have
+ significant professional experience but are not yet ready for changes
+ in their work environment; people wishing to change career but unable
+ to afford the time or money for a full level 7 {{{course}}} that
+ duplicates some of their existing experiential or formal learning; and
+ many others are less likely to enrol.
+
+ Additionally, the level and nature of the digital skills required by
+ people of a wide range of roles is increasing. It is predicted that
+ within 20 years, 90% of all jobs will require some element of digital
+ skills \cite{DigitalSkills}. The flexibility of the {{{fmf}}} will
+ provide grater opportunity for people in work to gain digital skills.
+
+
+
+
+ The {{{fmf}}} is intended to:
+  - Rationalise the way universities give credit for prior learning in
+    digital skills.
+  - Create a collection of {{{skills}}}, to be used as {{{los_long}}}
+    ({{{los}}}) in {{{course}}} design, the meaning which is clearly
+    documented and agreed by the members of the IoC and published for
+    public access.
+  - Simplify the process of giving credit for prior learning in digital
+    skills by providing a curated collection of professional
+    development courses and the IoC {{{skills}}} that anyone successfully
+    completing the course can be expected to have.
+  - Create opportunities for universities to add in-demand {{{skills}}}
+    to their {{{courses}}} by encouraging the development of easily
+    accessible {{{modules}}}.
+
+** TODO More on widening participation aspects
+
+
+** TODO Cite evidence and/or justification of the need for the fmf
+  - Shadbolt \cite{shadbolt}
+  - Dowling
+
+
+* Names and Terminology
+
+** Terms that Differ Between Institutions
+
+Different institutions use different terms for the units of teaching
+and learning in which their students are enrolled. Here, we will
+discuss the terms {{{course}}}, {{{module}}} and {{{lo_long}}}
+({{{lo}}}) that are used throughout this document.  Each term will be
+described with the intention of allowing the reader to decide which
+component in their own institution is the equivalent.  For example,
+some Universities use "module" to describe a unit of cogent topics,
+which would fit into a "course" that students sign up for and
+eventually get an award that matches its name.  Another university
+would claim that this describes, instead, "courses" that make up a
+degree "programme"
+
+*** {{{course}}}
+
+In this document, a {{{course}}} refers to a programme of study in
+which students are taught, assessed and ultimately awarded a degree.
+Specifically, any {{{course}}} that uses the {{{fmf}}} will be a
+degree that awards a level 7 "master's" qualification. 
+
+The {{{course}}} will usually be referred to by its title. For
+example, "MSc Cyber Security in Equine Studies", is a (fictitious)
+{{{course}}} that might make use of the {{{fmf}}}.
+
+*** {{{module}}}
+
+Within a {{{course}}}, students are /usually/ taught and assessed in
+cogent units of material.  In this document, each of these units is
+referred to as a {{{module}}}. 
+
+Typically, a {{{module}}} will:
+ - Be assessed in some way
+ - Contribute to the {{{course}}} {{{los}}}
+ - Teach and assess a single topic or cogent collection of topics
+   relating to the {{{course}}}
+
+
+
+**** TODO Needs thinking about!
+How many {{{course}}}s would this definition not fit? {{{courses}}}
+that don't divide into {{{modules}}} or those that have {{{course}}}
+level assessment, maybe? Is this a problem?  Are those course ones
+that would be unsuitable for application of the {{{fmf}}} anyway?
+
+*** {{{lo_long}}}
+
+A {{{lo_long}}} ({{{lo}}}) is a skill, body of knowledge or awareness
+required or expected in order for a learner to be considered to have
+passed a {{{module}}} and, therefore, a {{{course}}}.
+
+Typically, a {{{module}}} will have a number of {{{los}}} that define
+the meaning of "passing" and so learning and assessment are both a
+means to achieve the {{{lo}}}. In other words, should a learner be
+able to demonstrate the {{{los}}}, then they have achieved what is
+required to pass the {{{module}}}
+
+*** {{{apl_long}}} ({{{apl}}})
+
+{{{apl_long}}} ({{{apl}}}) is the recognition, allowed by an academic
+institution's regulations, of prior learning, and the use of that
+prior learning to offset {{{los_long}}} or whole {{{modules}}} in
+their current {{{course}}}.
+
+A student with a master's degree in Computer Science, for example,
+might take a {{{course}}} in Software Development. If the institution
+recognises that the programming {{{module}}} studied and passed by the
+student in the first {{{course}}} is equivalent to the programming
+{{{module}}} in the new {{{course}}}, and does not require the student
+to study or be examined in the programming {{{module}}} in the new
+{{{course}}}, then this is an example of the use of {{{apl}}}.
+
+The exact mechanism for applying {{{apl}}}, the allowed level of
+{{{apl}}}, evidence required and so on, is heavily dependant on the
+institution.
+
+*** {{{apel_long}}} ({{{apel}}})
+
+Some institutions recognise prior learning beyond academic taught
+courses, allowing learners with experience from their career to offset
+work on the course.  In this document, we refer to this as
+{{{apel_long}}} ({{{apel}}}).
+
+
+*** {{{pdp_long}}} ({{{pdp}}})
+** Terms with special meanings within the {{{fmf}}}
+*** {{{skills}}}
+
+In this document, we use {{{skill}}} to refer to a capability that a
+learner can be shown to have.  These {{{skills}}} are the units of
+capability that the {{{fmf}}} uses to show equivalence between the {{{los_long}}} of
+{{{courses}}}, {{{modules}}} and {{{pdps_long}}}.
+
+A {{{skill}}} should be:
+
+1. Unique. The framework will not define multiple names for the same {{{skill}}}.
+2. Atomic. A {{{skill}}} is a small unit and should not be made up of sub-components.
+3. Cogent. Typically a {{{skill}}} will be around one particular topic, technology or ability.
+4. Demonstrable. Every {{{skill}}} is measurable and usable.  The
+   {{{skills}}} of the {{{fmf}}} should be expressed using Bloom's
+   taxonomy and with consideration of how they are assessed.
+
+
+*** {{{skill_providers}}}
+
+A {{{skill_provider}}} is any {{{course}}}, {{{module}}} or
+{{{pdp}}} that has been identified by the IoC {{{fmf}}} as
+guaranteeing that a learner who successfully completes it will have
+one or more explicitly identified {{{skills}}}.
+
+When constructing a {{{course}}} using the {{{fmf}}}, a {{{course}}}
+designer should have confidence that any of the {{{course}}}
+{{{los_long}}} expressed as {{{fmf}}}{{{skills}}} can be achieved by
+studying and passing a {{{skill_provider}}} {{{course}}} or {{{pdp}}}
+that lists those {{{los_long}}}.
+
+
+
+
+*** {{{gateway_asss}}}
+
+A major component of the {{{fmf}}} is the database of {{{skills}}} and
+{{{skill_provider}}} {{{courses}}} and {{{pdp}}}, which are designed
+to allow simple and direct recognition of prior learning in {{{fmf}}}
+{{{courses}}}.  
+
+However, not all institutions have regulations that will allow for
+this recognition without some form of assessment. In such cases, a
+course may define a "{{{gateway_ass}}}", which assesses a learner's
+capability against the {{{fmf}}} {{{skills}}}.  A learner may
+demonstrate experience through a {{{course}}} or {{{pdp}}} programme
+that has the correct {{{skills}}}, but still be required to pass a
+{{{gateway_ass}}}.  {{{courses}}} using the {{{fmf}}} that require a
+{{{gateway_ass}}} must declare this explicitly so that learners are
+aware of the requirement before enrolling. 
+
+
+
+
+* The IoC {{{fmf_long}}}
+The {{{fmf_long}}} ({{{fmf}}}) has three components:
+
+ 1. A collection of practical digital skills that has been created in
+    order to provide the smallest set necessary to express digital
+    skills requirements for the widest possible set of {{{courses}}}
+    and careers.
+ 2. A repository of ways in which learners can learn those skills and
+    demonstrate that learning. This is typically through studying an
+    academic {{{course}}} or {{{pdp_long}}}, but may also be through
+    experiential learning as part of a work role or independent study.
+ 3. This document, which details how the first two components can be
+    used to offer learners a clear and universally recognised way to
+    offset their prior learning against the requirements of a Level 7
+    course.  
+
+As an example, a learner might wish to study
+{{{approved_course_example}}} at {{{approved_course_institution}}}.
+The {{{course}}} is constructed of a number of {{{modules}}}, each of
+which specify the {{{los_long}}} ({{{los}}}) that must be achieved in
+order for a learner to complete the {{{module}}}. The course adheres
+to the IoC {{{fmf_long}}} and so the {{{los}}} of these modules are
+expressed as {{{fmf}}} {{{skills}}}.
+
+If the learner has no previous learning in the specific subject of the
+{{{course}}}, then they would take the {{{course}}} in the traditional
+manner, seeing very little benefit from the {{{fmf}}} other than
+having universally recognised {{{los_long}}}.
+
+A learner who /has/ had previous learning experiences from
+{{{courses}}} or {{{pdp}}}s that are recognised by the {{{fmf}}},
+however, can use that prior learning in place of some of the
+{{{modules}}} on the {{{course}}}.  This can mean a quicker route to
+an award, a lighter study load and perhaps reduced fees, all of which
+make the opportunity to take the {{{course}}} more viable for people
+changing careers, up-skilling or getting back into work.
+
+Some {{{modules}}} will express their {{{los}}} in nothing but
+{{{fmf}}} {{{skills}}}, and so the replacement of a {{{module}}} is
+simple.  In cases where a {{{module}}} requires {{{los_long}}} that
+/cannot/ be expressed by {{{fmf}}} {{{skills}}} (such as instances of
+highly specialised technologies), or where there are no
+{{{skill_providers}}} that can provide some of the {{{skills}}} or
+{{{los_long}}} (such as {{{modules}}} that require students to
+demonstrate academic knowledge and skills unlikely to be covered in a
+{{{pdp}}}), then the institution may use a {{{gateway_ass}}} to ensure
+all {{{los_long}}} are met.  The {{{gateway_ass}}} should be a single
+exercise, in a form appropriate for the topic, that covers all fo the
+{{{los_long}}} that cannot be met by a {{{skill_provider}}} and
+possibly other {{{los_long}}} for the module.
+
+
+
+ # - Curating skills providers and mappings
+ # - Link to accreditation
+* Levels of  Flexibility
+The {{{fmf}}} defines three levels of flexibility for a {{{course}}}.
+Each of these levels has a set of requirements and
+expectations. Academic regulations differ between institutions and
+this may be a deciding factor in selecting a level of flexibility in a
+new {{{course}}}.  The most flexible {{{courses}}} allow the greatest
+recognition of prior formal and experiential learning, but may not be
+appropriate for all {{{courses}}}, while basic flexibility is simple
+to implement under most academic regulations, but limits the potential
+to take advantage of the catalogue of {{{skill_providers}}}.
+
+For a {{{course}}} to be recognised as an IoC {{{fmf}}} {{{course}}},
+it must meet the requirements set out in one of the subsections below.
+
+
+
+# *** DONE Need to discuss the *academic* portion of modules and how this is achieved through gateway assessments
+
+
+** Maximum Flexibility
+A {{{course}}} that implements maximum flexibility will allow a
+learner to examine, with or without support, the {{{los_long}}}, which
+will be expressed solely in {{{fmf}}} {{{skills}}}, and be able to
+identify prior taught or experiential learning that already
+demonstrates their attainment of some of the required {{{skills}}}.
+
+The prior learning must be an approved {{{fmf}}} {{{skill_provider}}},
+which also ensures that the {{{los_long}}} are presented as {{{fmf}}}
+{{{skills}}}.
+
+The {{{course}}} will not give a limited list of approved
+{{{skill_providers}}}, but may place restrictions on the use of prior
+attainment of {{{skills}}} to meet the {{{los_long}}} for any given
+{{{module}}} or {{{modules}}} on the course.  For example, a
+{{{course}}} that requires any matched {{{skills}}} to come from a
+{{{skill_provider}}} on provided list that is a subset of the
+{{{fmf}}} {{{skill_provider}}} database is not considered to be a
+{{{course}}} that can be approved under the requirements for maximum
+flexibility.  However, a {{{course}}} can be considered to meet the
+requirements for maximum flexibility if it restricts which of its own
+{{{modules}}} are appropriate for replacement by prior learning
+through the {{{fmf}}}, as long as there are no restrictions placed on
+the /source/ of those replacements. This is particularly useful for
+maintaining compliance with local institutional regulations and
+meeting the requirements of accrediting bodies.
+
+It is expected that recognition for prior learning will allow a
+learner to replace only whole {{{modules}}} of their {{{course}}}, but
+this is not a requirement of the {{{fmf}}}.
+
+ # - Whole catalogue of IoC {{{skills}}} and {{{skill_providers}}} available
+ # - Any matching areas of the {{{course}}} can be replaced
+ # - Can restrict replacement of specific {{{modules}}} if required -
+ #   for accreditation, for example
+** Partial Flexibility
+
+A {{{course}}} can implement partial flexibility follows the same
+requirements as those that implement maximum flexibility, but:
+
+ - The {{{course}}} may specify a limited set of {{{skill_providers}}}
+   that can be used to replace {{{course}}} {{{modules}}}.
+
+ - The {{{course}}} may specify a subset of {{{course}}} {{{modules}}}
+   that can be replaced by prior learning using {{{fmf}}} {{{skills}}}
+   equivalence.
+
+If the {{{course}}} requires a limited set of {{{skill_providers}}},
+then it will be defined clearly as a list of records in the IoC
+{{{fmf}}} {{{skill_provider}}} database.
+
+Any limitation on {{{modules}}} within the {{{course}}} that can be replaced
+by prior learning can be defined by:
+ 1. An list of modules that *cannot* be replaced by {{{fmf}}}
+    {{{skill_providers}}}.
+ 2. An explicit list of {{{modules}}} that *can* be replaced by
+    {{{fmf}}} {{{skill_providers}}}
+ 3. A maximum *percentage* of {{{modules}}} that can be replaced by
+    {{{fmf}}} {{{skill_providers}}}
+ 4. Some combination of options 1, 2 and 3.
+
+
+Only the {{{modules}}} that are allowed to be replaced by learning
+through an {{{fmf}}} {{{skill_provider}}} need to have {{{los_long}}}
+defined as {{{fmf}}} {{{skills}}}.
+
+ # - Full or subset of {{{skill_providers}}}
+ # - Subset of {{{course}}} (stated explicitly or as a percentage) can be replaced with learning from other {{{skill_providers}}}
+** Basic Flexibility
+
+A {{{course}}} that implements basic flexibility is one in which there
+is at least one {{{module}}} or {{{lo_long}}} that can be met by
+{{{fmf}}} {{{skill_providers}}}, and an explicit list of
+{{{skill_providers}}} that can be used to meet them.
+
+
+
+In addition, the {{{course}}} may allow other recognition of
+{{{skill_providers}}} on a case-by-case, learner-by-learner basis
+using the host institution's regulations for {{{apl}}} or {{{apel}}}.
+
+ # - Some key {{{modules}}} taken at other institutions, explicitly stated in the {{{course}}} specification
+ # - {{{apl}}}/{{{apel}}} on a case-by-case basis
+* {{{fmf}}} {{{skills}}} 
+
+The list of {{{fmf}}} skills is given in [[Appendix][the Appendix]]. Each
+{{{skill}}} has a name, a description, a unique identifier and a
+description of what a learner with this skill will be capable of.
+
+For example, the skill "Programming: Simple Control Flow" has a full
+record that looks like this:
+
+|---------------+----------------------------------------------------------------------------------------|
+| *Skill*       | Programming: Simple Control Flow                                                       |
+| *ID*          | PROG/2/CTRL                                                                            |
+| *Description* | The use of selection, iteration and function calls to control order of  execution      |
+| *Capabilites* | 1. Create software that uses selection and iteration                                   |
+|               | 2. Use basic "functional decomposition" to create and use functions to solve a problem |
+|---------------+----------------------------------------------------------------------------------------|
+
+
+
+Each of the {{{skills}}} is unique, atomic and demonstrable.
+
+ - Unique :: Although {{{skills}}} can be related to each other, no
+             two {{{skills}}} with different IDs should be considered
+             equivalent.
+ - Atomic :: A {{{skill}}} may have more than one capability
+             associated with it and a learner is not considered to
+             have demonstrated the {{{skill}}} unless they are able to
+             demonstrate each of them.
+ - Demonstrable :: All capabilities are expressed as things that can
+                   be observed in a learner's activity and, therefore,
+                   assessed.
+
+
+
+***** TODO Things to work in
+ - Map each to SFIA skills and levels?
+ - Not all will fit? What do we want that doesn't fit SFIA?
+ - [X] Define schema
+
+* TODO Requirements for Recognition as a {{{skill_providers}}}
+
+A {{{skill_provider}}} is any educational unit ({{{course}}},
+{{{module}}} or {{{pdp}}}, for example) that has been identified by
+the IoC {{{fmf}}} as guaranteeing that a learner who successfully
+completes it will have one or more explicitly identified {{{skills}}}.
+
+To be recognised as a {{{skill_provider}}}, the provider of the unit
+must submit it for approval by the IoC {{{skills}}} board. Details of
+the process are given in the document
+"[[file:recog_skill_prov.org][Process for Recognition as a Skill
+Provider]]".
+
+The IoC will evaluate each unit for:
+
+ 1. Alignment with the proposed IoC {{{skill}}} or {{{skills}}}. Each
+    unit should lead to demonstration of the capabilities associated
+    with the {{{skills}}}.
+ 2. Rigor in delivery. All learners should have equal opportnity to
+    excel. Multiple modes of delivery are acceptable as long as they
+    can be shown to lead to equivalent outcomes.
+ 3. Discrimination. Assessment must be shown to discriminate clearly
+    between those learners who gained the specified {{{skills}}} and
+    those that did not. This may be through a pass/fail outcome in
+    which all learners who pass the unit can demonstrate the
+    {{{skill}}}; or it could be through some threshold, such that
+    learners might pass the assessment but not achieve a grade high
+    enough to guarantee that they can demonstrate the IoC {{{skills}}}.
+
+
+** TODO Things to discuss
+ - Fees
+ - Responsibilities and legal concerns
+ - Regularity of approval meetings
+ - Length of recognition
+
+
+* TODO Constructing a {{{course}}} using the {{{fmf_long}}}
+
+ - Guidance for creating courses
+ - Requirements
+
+
+* TODO Approval of {{{fmf}}} {{{courses}}}
+ - Process
+   1. Design course using {{{fmf}}} {{{skills}}}
+   2. Decide level of flexibility
+   3. Create lists of restricted or allowed replacements, if appropriate
+   4. Review by IoC panel (4 times a year, IoC members from Academeia
+      and Industry, plus pipeline of externals from other unis?)
+   5. What about course changes?
+      - Keep light touch approach - pair of panel members check over
+        and agree if changes are minor enough to allow without panel
+        review
+      - Otherwise wait for next panel
+   6. Courses that are not "approved" cannot claim to adhere to the
+      framework, although they can still run and benefit from the
+      framework and database of providers. Courses without approval should make no mention of the IoC {{{fmf}}}
+* TODO Approval of {{{skill_providers}}}
+ - Process:
+   1. Associate unit with {{{skill}}}
+   2. Provide assessment material and marking guidelines,
+      demonstrating threshold for {{{skill}}} recognition.
+   3. Describe deivery mechanisms, learenr support, etc.
+   4. Review by IoC panel
+* Version Information
+
+This is version [{{{major}}}.{{{minor}}}.{{{postfix}}}] of the {{{fmf_long}}}
+specification.
+
+** Version Numbering
+
+  This is a version-controlled document.  The latest version can be
+  accessed at {{{doc_url}}}.  Courses created using the
+  {{{fmf_long}}} should clearly state the version of this document
+  that was used to prevent confusion.  
+
+  It is recommended that courses update to the latest version of this
+  document as soon as possible. The IoC will make every effort to keep
+  the time between versions as long as possible.
+
+  Versions identifiers are of the format
+  $\left[\text{major}.\text{minor}.\text{postfix}\right]$. Major and
+  minor are integers such that a higher relative major version always
+  indicates a newer version and a higher relative minor version
+  between documents with equal major versions indicates a newer
+  version.  Versions with equal major number will generally be
+  similar, with larger minor version indicating clarifications and
+  fixing of errors.  Changes to the major version number indicate more
+  fundamental changes to the intention of parts of the document or the
+  {{{fmf_long}}} as a whole.
+
+  The $\text{postfix}$ element will always be one of *final* or
+  *draft*. Any version with a postfix of *draft* is for consultation
+  and information only. Only when a version is released with a
+  postfix element of *final* should it be considered for use.
+
+
+** TODO Versions and {{{fmf}}} {{{skills}}}
+
+ - skills mappings are tagged with versions also
+
+** Changelog
+
+All versions are listed below with a description of the change from
+the previous version.
+
+-  Version $\left[0.1.\text{draft}\right]$ :: Initial draft of the {{{fmf_long}}} document.
+
+#  LocalWords:  Shadbolt Dowling noexport fmf num pri tex toc todo
+
+#  LocalWords:  los asss apl APL apel url stylesheet css href MSc
+#  LocalWords:  DigitalSkills shadbolt postfix Changelog
+
+* Appendix
+** TODO List of {{{fmf}}} {{{skills}}}
