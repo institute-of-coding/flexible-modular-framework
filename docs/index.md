@@ -534,6 +534,6 @@ the previous version.
 
 <!-- LocalWords:  Shadbolt Dowling noexport fmf num pri tex toc todo -->
 <!-- LocalWords:  los asss apl APL apel url stylesheet css href MSc -->
-<!-- LocalWords:  DigitalSkills shadbolt postfix Changelog --> pdp ul
+<!-- LocalWords:  DigitalSkills shadbolt postfix Changelog  pdp ul -->
 <!--  LocalWords:  pdps skilling li SFIA
  -->
